@@ -1,0 +1,13 @@
+-f /usr/share/pip-wheels
+Django==1.8
+django-crispy-forms==1.6.0
+django-markdown==0.8.4
+django-rosetta==0.7.12
+Markdown==2.6.6
+microsofttranslator==0.8
+Pillow==3.3.0
+polib==1.0.7
+pytz==2016.6
+requests==2.11.1
+six==1.10.0
+sorl-thumbnail==12.3
