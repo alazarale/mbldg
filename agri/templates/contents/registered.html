@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% trans 'successfully registerd' %}{% endblock %}
+{% block content %}
+<style type="text/css" rel="stylesheet">
+    body{
+        background: #dfdcdc;
+    }
+    .rent{
+        background: white;
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+    }
+    .rent p{
+        font-size: 1.2em;
+    }
+    .su{
+        background: #1bfc0a;
+        border-radius: 25px;
+        width: 40%;
+        height: 7%;
+        text-align: center;
+
+    }
+</style>
+
+  <div class="container">
+        <div class='row rent'>
+            <div class='col-sm-offset-4'>
+                <h1 class='su'>Successful</h1>
+            </div>
+        </div>
+        <br>
+        <div class='row rent'>
+            <div style='text-align:center'>
+                <h2>Thank you for registering</h2>
+                <p >We will setup a meeting and contact you as fast as we can.</p>
+                <p>To get more information contact us using: </p>
+                <img src="{% static 'images/mail.png' %}"> : malemubuilding@gmail.com
+                <img src="{% static 'images/phone1.png' %}">: +251911257698
+            </div>
+            <br><br>
+        </div>
+        <br><br>
+    </div>
+{% endblock %}

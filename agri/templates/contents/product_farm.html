@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans 'Products' %}{% endblock %}
+{% block content %}
+<style type="text/css" rel="stylesheet">
+    .each{
+        height:600px;
+        overflow:auto;
+    }
+    .each h3{
+        text-align: center;
+    }
+    .category{
+        background: rgba(53,203,18, .4);
+        height: 50%;
+        overflow:auto;
+        max-width:200px;
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+    }
+    .category h2{
+        color: #fff;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background: -webkit-linear-gradient(#260CD1, #3354D1, #457DD1);
+        border-radius: 25px;
+    }
+    .product-home{
+        background: #B8B6B2;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+
+    }
+    body{
+        background: #B8B6B2;
+    }
+    .product-place{
+        background:#CFCFD0;
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+    }
+
+
+</style>
+
+   <div class="container">
+        <div class="row">
+            <div class="col-xs-2 category">
+                <h2>{% trans 'Category' %}</h2>
+                <ul class='nav nav-pills nav-stacked'>
+                    <li><a href="{% url 'agri:product' %}">{% trans 'All' %}</a></li>
+                    <li><a href="{% url 'agri:product_building' %}">{% trans 'Building' %}</a></li>
+                    <li><a href="{% url 'agri:product_dairy_farm' %}">{% trans 'Dairy farm' %}</a></li>
+                    <li><a href="{% url 'agri:product_poultry' %}">{% trans 'Poultry' %}</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-9">
+                <div class="row products  product-home" >
+                    <h2 style="text-align:center;">{% trans 'Dairy farm' %}</h2>
+                    <br><br>
+                    {% for product in dairy_farm %}
+                    <div class="col-sm-6" style="height:400px;">
+                        <div class="product-place">
+                            <br>
+                            <img src="{{ product.photo.url }}" class="img-responsive" style="max-height:200; margin:0 auto;">
+                            <h3 style="text-align:center">{{ product.name }}</h3>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="{{ product.get_absolute_url }}" class="button">{% trans 'See description' %}</a>
+                                    <br><br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="col-sm-offset-3" style="color:green;">{% trans 'Price:' %} {{ product.price }}{% trans 'birr' %}</p>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-sm"></div>
+                    {% endfor %}
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

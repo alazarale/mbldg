@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}About the developer{% endblock %}
+{% block content %}
+<style type="text/css" rel="stylesheet">
+    body{
+        background:#B8B6B2;
+    }
+    .about-dev{
+        background: #D5D5D6;
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row about-dev">
+                <div class="col-sm-4">
+                    <br><br>
+                    <img src="{% static 'images/developer.jpg' %}" class="img-circle img-responsive">
+                </div>
+                <div class="col-sm-8">
+                    <h3 style="color:blue">Lead Developer and Designer</h3>
+                    <h3>Name: <small>Alazar Alemayehu</small></h3>
+                    <h3>Work: <small>Grade 12 student and Founder & CEO of ASTR Lab.</small></h3>
+                    <h3>Website: <small>alazar.pythonanywhere.com</small></h3>
+                    <h3>E-mail: <small>alazar463@gmail.com</small></h3>
+                    <h3>Mobile: <small>+251923678876</small></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <div class="row about-dev">
+                <div class="col-sm-4">
+                    <br><br>
+                    <img src="{% static 'images/designer.jpg' %}" class="img-circle img-responsive">
+                </div>
+                <div class="col-sm-8">
+                    <h3 style="color:blue">Designer</h3>
+                    <h3>Name: <small>Biruk Nigatu</small></h3>
+                    <h3>Work: <small>2nd Year university student</small></h3>
+                    <h3>E-mail: <small>biruknigatu4@gmail.com</small></h3>
+                    <h3>Mobile: <small>+251922697330</small></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+{% endblock %}

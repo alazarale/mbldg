@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% block title %}{% trans 'Contact' %}{% endblock %}
+{% block content %}
+<style type="text/css" rel="stylesheet">
+    body{
+        background:#B8B6B2;
+    }
+    .contact{
+        background: #D5D5D6;
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+    }
+</style>
+    <div class="container">
+        <div class="row contact">
+            <img src="{% static 'images/michael.JPG' %}" class="img-circle img-responsive" style="max-width:200px; max-height:200px; margin: 0 auto">
+            <div class="col-sm-offset-1">
+                <h2 style="color:green;">{% trans 'General Manager of MALEMU Integrated Farm and Commercial businesses' %}</h2>
+                <h1>{% trans 'Name' %}: <small>{% trans 'Michael Alemu' %}</small></h1>
+                <img src="{% static 'images/mail.png' %}"> : umela@rogers.com
+                <img src="{% static 'images/phone1.png' %}">: +251900000000
+                <br><br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h2 style="text-align:center;">{% trans 'Or use Google map' %}</h2>
+        <div class="map-responsive contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.8937375454784!2d39.13017369589922!3d7.980093998571132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnNDguMyJOIDM5wrAwNyc1Mi41IkU!5e1!3m2!1sen!2suk!4v1468141937341" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <br><br><br>
+    </div>
+
+
+  <div class="container-fluid footer">
+        <br>
+        <div class="row">
+            <div class="col-sm-6" id="con">
+                <h2 class="col-sm-offset-5">{% trans 'Contact Us!' %}</h2>
+                <br>
+                <form action="." method="post" style="color:green;">
+                    {% csrf_token %}
+                    {{ form_contact|crispy }}
+                    <input type="submit" class="btn btn-primary col-sm-offset-5" value="send">
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <br><br><br><br>
+                <div class="col-sm-offset-3">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <img src="{% static 'images/phone.png' %}">
+                        </div>
+                        <div class="col-sm-4">
+                            <p>+251900000000</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-sm-offset-3">
+                    <div class="row">
+                        <div class="col-sm-1">
+                        <img src="{% static 'images/location.png' %}">
+                        </div>
+                        <div class="col-sm-4">
+                            <strong>{% trans 'Arsi Asella, Ethiopia' %}</strong><br>
+                            {% trans "Kebele 10, inside Michael's" %}<br>{% trans 'building' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+{% endblock %}

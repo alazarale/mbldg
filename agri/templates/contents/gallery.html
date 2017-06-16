@@ -1,0 +1,80 @@
+{% extends 'gallery_base.html' %}
+{% load i18n %}
+{% load thumbnail %}
+{% block title %}{% trans 'Gallery' %}{% endblock %}
+{% block photos %}
+    <div class="container conta">
+        <h1 style="text-align: center;">{% trans 'Commercial Building' %}</h1>
+            <div class="row">
+                {% for photo in building %}
+                <div class="col-sm-4">
+                    <div class="gallery-desc">
+                        {% thumbnail photo.image "400x400" as im %}
+                         <a class="fancybox" rel="group" title="{{ photo.description }}" href="{{ photo.image.url }}"><img src="{{ im.url }}" class="img-responsive" ></a>
+                        {% endthumbnail %}
+                    </div>
+                    <br>
+                </div>
+                  {% endfor %}
+
+            </div>
+            <br>
+        <a href="{% url 'agri:building' %}" class="button col-sm-offset-5">See more</a>
+        <br><br>
+    </div>
+    <br><br><br>
+    <div class="container conta">
+        <h1 style="text-align: center;">{% trans 'Poultry' %}</h1>
+            <div class="row">
+                {% for photo in poultry %}
+                <div class="col-sm-4">
+                    <div class="gallery-desc">
+                        {% thumbnail photo.image "400x400" as im %}
+                         <a class="fancybox" rel="group" title="{{ photo.description }}" href="{{ photo.image.url }}"><img src="{{ im.url }}" class="img-responsive" ></a>
+                        {% endthumbnail %}
+                    </div>
+                    <br>
+                </div>
+                  {% endfor %}
+            </div>
+            <a href="{% url 'agri:poultry' %}" class="button col-sm-offset-5">See more</a>
+        <br><br>
+    </div>
+     <br><br><br>
+    <div class="container conta">
+        <h1 style="text-align: center;">{% trans 'Dairy farm' %}</h1>
+            <div class="row">
+                {% for photo in dairy_farm %}
+                <div class="col-sm-4">
+                    <div class="gallery-desc">
+                        {% thumbnail photo.image "400x400" as im %}
+                         <a class="fancybox" rel="group" title="{{ photo.description }}" href="{{ photo.image.url }}"><img src="{{ im.url }}" class="img-responsive" ></a>
+                        {% endthumbnail %}
+                    </div>
+                    <br>
+                </div>
+                  {% endfor %}
+            </div>
+         <a href="{% url 'agri:dairy_farm' %}" class="button col-sm-offset-5">{% trans 'See more' %}</a>
+        <br><br>
+    </div>
+ <br><br><br>
+    <div class="container conta">
+        <h1 style="text-align: center;">{% trans 'Farm' %}</h1>
+            <div class="row">
+                {% for photo in farm %}
+                <div class="col-sm-4">
+                    <div class="gallery-desc">
+                        {% thumbnail photo.image "400x400" as im %}
+                         <a class="fancybox" rel="group" title="{{ photo.description }}" href="{{ photo.image.url }}"><img src="{{ im.url }}" class="img-responsive" ></a>
+                        {% endthumbnail %}
+                    </div>
+                    <br>
+                </div>
+                  {% endfor %}
+            </div>
+        <a href="{% url 'agri:farm' %}" class="button col-sm-offset-5">{% trans 'See more' %}</a>
+        <br><br>
+    </div>
+<br><br><br>
+{% endblock %}

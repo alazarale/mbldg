@@ -1,0 +1,24 @@
+{% extends 'gallery_base.html' %}
+{% load i18n %}
+{% load thumbnail %}
+{% block title %}{% trans 'Gallery' %}{% endblock %}
+{% block photos %}
+<br><br><br>
+    <div class="container conta">
+        <h1 style="text-align: center;">{% trans 'Farm' %}</h1>
+            <div class="row">
+                {% for photo in farm %}
+                <div class="col-sm-4">
+                    <div class="gallery-desc">
+                        {% thumbnail photo.image "400x400" as im %}
+                         <a class="fancybox" rel="group" title="{{ photo.description }}" href="{{ photo.image.url }}"><img src="{{ im.url }}" class="img-responsive" ></a>
+                        {% endthumbnail %}
+                    </div>
+                    <br>
+                </div>
+                  {% endfor %}
+            </div>
+        <br><br>
+    </div>
+<br><br>
+{% endblock %}

@@ -1,0 +1,223 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en"><!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- i use bootstrap to make it responsive-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" >
+    <link type="text/css" href="{% static 'css/main.css' %}" rel="stylesheet">
+
+    <script>
+        var navbar,dropmenu, slimg;
+        function yscroll() {
+            navbar = document.getElementsByClassName("main-nav")[0];
+            slimg = document.getElementsByClassName("forjs")[0].clientHeight;
+            dropmenu = document.getElementsByClassName("dropdown-menu")[0];
+            dropmenu2 = document.getElementsByClassName("dropdown-menu")[1];
+            hover_show = document.getElementsByClassName("hover-show")[0];
+            ypos = window.pageYOffset;
+            if(ypos>(slimg-20)){
+                navbar.style.background = "#000";
+                dropmenu.style.background = "rgba(0,0,0,.5)";
+                hover_show.style.background = "rgba(0,0,0,.5)";
+            }else{
+                navbar.style.background = "rgba(150,150,150,.4)";
+                dropmenu.style.background = "rgba(150,150,150,.4)";
+                dropmenu2.style.background = "rgba(150,150,150,.4)";
+                hover_show.style.background = "rgba(150,150,150,.4)";
+            }
+        }
+        window.addEventListener("scroll", yscroll);
+    </script>
+    <style type="text/css" rel="stylesheet">
+        .hover-show{
+            display: none;
+            position: absolute;
+            background: rgba(150,150,150,.4);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .hover-show a{
+            padding-left: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .down:hover .hover-show{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="forjs">
+    <div class="container-fluid">
+
+        <div class="navbar navbar-fixed-top fixed-width">
+            <div class="container-fluid main-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span><img src="{% static 'images/nav.png' %}" /></span>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    <ul class="nav navbar-nav">
+                        <li {% if status == 'home'%} class="selected" {% endif %}><a href="{% url 'agri:home' %}" >{% trans 'Home' %}</a></li>
+                        <li {% if status == 'service' %} class="selected" {% endif %}><a href="{% url 'agri:service' %}">{% trans 'Service' %}</a></li>
+                        <li {% if status == 'product'%} class="selected" {% endif %} class="dropdown" >
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="dropdownMenu1">{% trans 'Products' %}<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'agri:product' %}">{% trans 'All' %}</a></li>
+                                <li><a href="{% url 'agri:product_building' %}">{% trans 'Building' %}</a></li>
+                                <li><a href="{% url 'agri:product_dairy_farm' %}">{% trans 'Dairy farm' %}</a></li>
+                                <li><a href="{% url 'agri:product_poultry' %}">{% trans 'Poultry' %}</a></li>
+                            </ul>
+                        </li>
+                        <li {% if status == 'news' %} class="selected" {% endif %} ><a href="{% url 'agri:news' %}">{% trans 'News' %}</a></li>
+                        <li {% if status == 'about' %} class="selected" {% endif %} ><a href="{% url 'agri:about' %}">{% trans 'About-us' %}</a></li>
+                        <li {% if status == 'contact' %} class="selected" {% endif %}><a href="{% url 'agri:contact' %}">{% trans 'Contact' %}</a></li>
+                        <li {% if status == 'gallery' %} class="selected" {% endif %} class="down">
+                            <a href="{% url 'agri:gallery' %}" class="hover-down">{% trans 'Gallery' %}</a>
+                            <div class="hover-show">
+                                <a href="{% url 'agri:gallery' %}">{% trans 'All' %}</a>
+                                <a href="{% url 'agri:building' %}">{% trans 'building' %}</a>
+                                <a href="{% url 'agri:poultry' %}">{% trans 'Poultry' %}</a>
+                                <a href="{% url 'agri:dairy_farm' %}">{% trans 'Dairy farm' %}</a>
+                                <a href="{% url 'agri:farm' %}">{% trans 'Farm' %}</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" >
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="dropdownMenu1">{% trans 'Language' %}<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {% for language in languages %}
+                                    <li>
+                                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                                    {{ language.name_local }}
+                                    </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="block">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="{% static 'images/nav5.jpg' %}" class="img-responsive fixed-width for-shadow">
+                        <div class="carousel-caption">
+                            <p style="color:#fff; font-size:1.3em;">{% trans 'Come and let us grow together our nation!' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{% static 'images/des.jpg' %}" class="img-responsive fixed-width for-shadow">
+                        <div class="carousel-caption">
+                            <p style="color:#fff; font-size:1.3em">{% trans 'Find your place with us' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="{% static 'images/nav3.jpg' %}" class="img-responsive fixed-width for-shadow">
+                        <div class="carousel-caption">
+                            <p style="color:#fff;font-size:1.3em">{% trans 'Grow your business here!!' %}</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/nav4.jpg' %}" class="img-responsive fixed-width for-shadow">
+                        <div class="carousel-caption">
+                            <p style="color:#fff;font-size:1.3em">{% trans 'The sooner we talk, the sooner you’ll secure a prime location in a growing business location' %}</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/nav2.jpg' %}" class="img-responsive fixed-width for-shadow">
+                        <div class="carousel-caption">
+                            <p style="color:#fff; font-size:1.3em">{% trans 'Grow your business here!!' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </div>
+        </div>
+             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    {% block content %}
+    {% endblock %}
+    <footer>
+    <div class="container-fluid footer">
+        <br><br>
+    <div class="row">
+        <div class="col-sm-3"><a href="https://www.facebook.com/Malemu-Integrated-Farm-Commercial-businesses-598252110347195/" id="fb"><img src="{% static 'images/fb.png' %}" alt="fb" class='img-responsive'></a><br><br></div>
+        <div class="col-sm-3"><a href="https://plus.google.com/108225305517418782162"><img src="{% static 'images/g+.png' %}" alt="g+" class="img-responsive"></a><br><br></div>
+        <div class="col-sm-3"><a href="http://www.twitter.com/malemu2008/"><img src="{% static 'images/twitter.png' %}" alt="Twitter" class="img-responsive"></a><br><br></div>
+        <div class="col-sm-3"><a href="http://https://www.instagram.com/malemu2008/"><img src="{% static 'images/instagram.png' %}" alt="instagram" class="img-responsive"></a><br><br></div>
+        <h5 class="col-sm-offset-5 footer-ground">  <a href="{% url 'agri:developer' %}" class="developer"> {% trans 'developers' %}</a></h5>
+    </div>
+    <div class="row ">
+        <br>
+        <h3 class="col-sm-offset-4" >Copyright © 2016 All rights Reserved</h3>
+    </div>
+    </div>
+    </footer>
+
+
+
+
+    <!-- bootstrap javascript plugin -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+    <script type="text/javascript" src="{% static 'lib/jquery-1.10.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'source/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky-kit.min.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'source/jquery.fancybox.css' %}" media="screen" />
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+	$( document ).ready(function() {
+        $("#sb").stick_in_parent();
+    });
+</script>
+</body>
+</html>

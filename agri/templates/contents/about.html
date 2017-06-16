@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans 'About-us' %}{% endblock %}
+{% block content %}
+<style rel="stylesheet" type="text/css">
+    .about-us{
+        background: #EAEAEB;
+    }
+    .about-us p{
+        font-size:1.2em;
+    }
+    .about-us p strong{
+        font-size:1.4em;
+        }
+    .about-us h2{
+        text-align: center;
+    }
+    .con-info{
+        background: #5A75D1;
+        color: #000;
+    }
+    .con-info:hover{
+        background: #1E1FD1;
+        color: #fff;
+    }
+</style>
+<div class="container about-us">
+     <h2>About us</h2>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="container">
+                <p>Welcome to our website developed by<a href="{% url 'agri:developer' %}"> Alazar and Bruk </a>a grade twelve and a first year university students from Assela</p>
+                <p>
+                    My name is <a href="{% url 'agri:contact' %}">Michael Alemu.</a> I am the General Manager of MALEMU Integrated Farm and Commercial businesses.
+                    My background is in community development and social planning with a Master of Arts Degree in Social Work from <a href="http://www.wlu.ca/"> Wilfred Laurier University</a> in Canada.
+                </p>
+                <p>
+                    I have worked in community development for three decades in Canada and on regular project work in 25 countries around the world.
+                    Over the past three years, my family, friends and have decided to invest our financial resources, networks and experiences to building profitable businesses that will employ local people paying good wages and use the profit from the businesses to fund local charitable initiatives.
+                </p>
+                <p>
+                    My mission is simply to grow successful businesses and give back to the people of Ethiopia, as well leave behind businesses that will evolve into MALEMU Foundation.
+                    I care deeply about Ethiopia and I want to serve the best I can through creating sustainable and credible businesses.
+                </p>
+                <p>
+                  <strong>I invite you to work together to develop business and help those young Ethiopian entrepreneurs to make money and keep growing.</strong>
+                </p>
+                <p>
+                    As you browse through this website, please <a href="{% url 'agri:contact' %}#con">let us know </a>if you would like to know more about what we do, or about investment in Assela.
+                    We will be happy to provide you information or connect you with the right people. <a href="{% url 'agri:contact' %}" class="con-info">Contact information</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br><br><br><br>
+{% endblock %}

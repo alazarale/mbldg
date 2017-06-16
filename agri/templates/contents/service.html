@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% trans 'Service' %}{% endblock %}
+{% block content %}
+    <style type="text/css" rel="stylesheet">
+        body{
+            background: #B8B6B2;
+        }
+        .conta{
+            box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+        }
+        .conta p{
+            font-size: 1.2em;
+        }
+    </style>
+    <div class="container conta" style="background: #fff;">
+        <h2 style="text-align:center;">{% trans 'Our services' %}</h2>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#poultry" class="button">{% trans 'Poultry' %}</a>
+                <br><br>
+            </div>
+            <div class="col-sm-3">
+                 <a href="#dairy-farm" class="button">{% trans 'Dairy Farm' %}</a>
+                <br><br>
+            </div>
+            <div class="col-sm-3">
+                 <a href="#farmers" class="button">{% trans 'Our Farmers' %}</a>
+                <br><br>
+            </div>
+            <div class="col-sm-3">
+                 <a href="#building" class="button">{% trans 'Commercial Building' %}</a>
+                <br><br>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+<br><br><br>
+<!--poultry-->
+    <div class="container conta" style="background: #fff;" id="poultry">
+       <h2 style="text-align:center;">Poultry</h2>
+        <p>
+            Chicken meat and eggs are essential diets of Ethiopians consumed in every household in the country.
+        </p>
+        <p>
+            They are nutritious, relatively cheaper, and available in rural and urban locations.
+            As the economy of Ethiopia and the population is grow the demand for chicken meat and eggs continue to increase throughout Assela and the surrounding cities.
+            The Government of Ethiopia is encouraging the establishment of both small and commercial scale poultry products as part of its agricultural development plan.
+        </p>
+        <p>
+            Our goal is to provide poultry products to consumers of Assela and neighboring towns, with the promise of quality and profitable business for investors while also serving as model training center for local farmers.
+            We hope to partner with local universities and international organizations for research and fieldwork opportunities.
+        </p>
+        <p>
+            We are located in Asella, Wolkesa Kebele in the Oromia Region of Ethiopia
+        </p>
+        <p>
+            Our poultry farm is housed in a barn built from cinderblocks with a size of 23m x 11.6 m, with 2m taken off the front for feed storage, office and egg storage.
+        </p>
+        <p>
+            Our chickens are a breed of Bovans Browns, With a maximum density not exceed 8-10 birds per meter square density we could house 2,400 chicks. However, since this is our first trial flock, we have decided to start with 1,500 chicks.
+        </p>
+        <p>
+            The chicks were ordered through <a href="http://http://www.genesisfarmsethiopia.com/"> Genesis Farm in Bishoftu (Debre Zeit)</a>, a model farm that imports baby chicks from Holland. Bishoftu is  117kms from Assela.
+        </p>
+        <p>
+            Our supplier of feed is Alema Farm also in Bishoftu while medicine and veterinary services are sourced from Assela and Bishoftu.
+        </p>
+        <p>
+            Our nests are built with 35cm wide x 35cm deep x 40 cm high. %
+        </p>
+        <p>
+            We have a thermometer placed evenly down the center of the barn to monitor temperature.  The ideal temperature is 21-24 degrees Celsius, and inlets is adjusted to allow for this, particularly with the cooler evenings.
+        </p>
+        <p>
+            We have two full-time staff (a female and male) working at the barn. These are our poultry farmer workers.
+        </p>
+        <img src="{% static 'images/workers.jpg' %}" class="img-responsive">
+        <p>  They have received training and continue to be supported with a consultant.</p>
+        <p>
+            The staff are required a full change out of clothing when entering the service room.  Coveralls and boots are provided.  When going into the chicken pen, a foot bath is need and staff dip there feet in the disinfect prior to entering the pen.  Disinfect and water should is changed daily.
+        </p>
+        <p>
+            The staff ensure proper management of the barn, and a high level of biosecurity. The entrance way was carefully thought out and allows for two entrances into the barn; one to be used for receiving feed, and the other to be used as the main entrance for employees and to ship the eggs.
+        </p>
+        <p>
+            <strong>BIOSECURITY IS THE MOST IMPORTANT FACTOR IN ORDER TO ENSURE FLOCK HEALTH AND MINIMIZE THE RISK OF EXPOSING THE FLOCK TO DISEASE. </strong>
+        </p>
+        <img src="{% static 'images/try.jpg' %}" class="img-responsive">
+        <p>
+            We hope to open Barn number 2 in July  2017 housing 3,000 chickens when the trail period of current flocks end.
+        </p>
+        <p>
+            We are looking for farmers, importers and exporters of eggs and suppliers of poultry products and packaging systems to network with us ….
+        </p>
+        <h3>Contact us at:</h3>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/mail.png' %}"> : umela@rogers.com
+        </div>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/phone1.png' %}">: +251900000000
+        </div>
+        <a href="{% url 'agri:contact' %}#con" style="font-size:2em;">Or leave us a message</a>
+        <br><br><br>
+    </div>
+    <br><br><br>
+    <!--Dairy Farm-->
+    <div class="container conta" id="dairy-farm" style="background: #fff;">
+        <h2 style="text-align: center;">Dairy Farm</h2>
+        <img src="{% static 'images/nav1.jpg' %}" class="img-responsive">
+        <p>
+            The Dairy Farm was established with two cows as a hobby farm in 2012. We started on a 1500 sq meter of plot of land to produce milk and milk products for personal use.  As we continued to see the benefits and learn more about the demand of milk in Assela, we decided to purchase more heifers and currently we have__ milking cows, and __ heifers.  We also have one horse that delivers milk to the community including to Assela hospital Café.
+        </p>
+        <h3>Contact us at:</h3>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/mail.png' %}"> : umela@rogers.com
+        </div>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/phone1.png' %}">: +251900000000
+        </div>
+        <a href="{% url 'agri:contact' %}#con" style="font-size:2em;">Or leave us a message</a>
+        <br><br><br>
+    </div>
+<br><br><br>
+    <div class="container conta" id="farmers" style="background: #fff;">
+        <h2 style="text-align:center;">Our farmers</h2>
+        <img src="{% static 'images/farm.jpg' %}" class="img-responsive">
+        <p>
+            Our goal is to fulfill the demand for milk and milk products in Assela and surrounding communities, create job opportunities, supply surplus heifers and male calves  for inter-ested farmers and individuals, and generate profit for the investors,
+        </p>
+        <p>
+            We are currently working aggressively to solve the challenge and shortage of animal feed and overcome the high feed cost. We are cultivating six hectares of land for corn, and cash crop.
+        </p>
+        <p>
+            Our plan also includes building a larger barn to house 40 cows, and also secure investment  land for growing feed.
+        </p>
+        <p>
+            <em>We are looking for international experts who can assist us in sustainable feed production; We are also looking for milking machines, cream and cheese processing equipment. </em>
+        </p>
+        <h3>To find out more, Contact us at:</h3>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/mail.png' %}"> : umela@rogers.com
+        </div>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/phone1.png' %}">: +251900000000
+        </div>
+        <a href="{% url 'agri:contact' %}#con" style="font-size:2em;">Or leave us a message</a>
+        <br><br><br>
+    </div>
+<br><br><br>
+    <div class="container conta" id="building" style="background: #fff;">
+        <h2 style="text-align:center;">Commercial Building</h2>
+        <img src="{% static 'images/buil.jpg' %}" class="img-responsive">
+        <p>
+            A spectacular next generation design, quality construction materials, conveniently located on the entrance of Assela,
+        </p>
+        <p>
+            This commercial building has _____ square feet.
+        </p>
+        <p>
+            The basement floor 3907 sq feet is dedicated to <a href="#">Community Library</a> and Learning Center with 20,000 books, broadband Internet access, digital room and a full range of business center. It serves up to 300 youngsters and professionals from Assela Community.
+        </p>
+        <p>
+            The main floor is 3907 sq feet convenient for banking services.
+        </p>
+        <p>
+            The First floor is 3406 sq feet, which will be available for retail store units and Specialty Market place
+        </p>
+        <p>
+            Second floor is 3406 sq feet convenient for retail stores
+        </p>
+        <p>
+            Third floor is 4814 sq feet and will primarily be used for offices and busi-ness centers, internet café, and advertising and promotional services.
+        </p>
+        <p>
+            Roof top Café consisting 4814 sq feet of open space will be available for coffehouse that can accommodate over100 customers seating and spectacular view of Mount Chilalo to the East and Lake Ziway to the West. We are looking for someone to build a brand of café with high quality, good value, fresh and wholesome food in a great atmosphere.
+        </p>
+        <p>
+            <strong>Features:</strong>
+        </p>
+        <ul style="font-size: 1.2em">
+            <li>Total building size is ________________</li>
+            <li>Convenient location with only 1 km from Arsi University new campus, half kms from Assela Technical Vocational College, Assela Hospital, Teacher training college, and emerging and choice residential neighborhood.</li>
+            <li>This multi purpose commercial building offers the option to combine units for a larger space. </li>
+            <li>3 Phase electric power supply and backup generator during electrical interrup-tions</li>
+            <li>Ample water supplies and other sanitation</li>
+            <li>Broadband internet access</li>
+            <li>Indoor and outdoor security cameras with 24 hours recording capabilities</li>
+            <li>24 hours armed security guards </li>
+            <li>Isuzu Truck available for tenets</li>
+            <li>Business center for photocopying and printing services</li>
+            <li>Plenty of parking for tenants and customers</li>
+        </ul>
+        <h3>Contact us at:</h3>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/mail.png' %}"> : umela@rogers.com
+        </div>
+        <div class="col-sm-offset-2">
+            <img src="{% static 'images/phone1.png' %}">: +251900000000
+        </div>
+        <a href="{% url 'agri:contact' %}#con" style="font-size:2em;">Or leave us a message</a>
+        <br><br><br>
+    </div>
+<br><br><br>
+
+{% endblock %}

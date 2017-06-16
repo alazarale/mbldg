@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% endblock %}
+{% block content %}
+
+<style type="text/css" rel="stylesheet">
+    body{
+        background: #B8B6B2;
+    }
+    .conta{
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+        background: #fff;
+    }
+    .conta p{
+        font-size: 1.2em;
+        background: #fff;
+    }
+    .gallery-desc{
+        overflow: auto;
+
+        box-shadow: 20px 20px 5px rgba(0, 0, 0, .5);
+    }
+</style>
+<div class="container conta">
+    <h2 style="text-align: center;">{% trans 'Photo gallery categories' %}</h2>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-3">
+           <a href="{% url 'agri:building' %}" class="button">{% trans 'Our building' %}</a>
+           <br><br><br>
+        </div>
+        <div class="col-sm-3">
+           <a href="{% url 'agri:poultry' %}" class="button">{% trans 'Poultry' %}</a>
+           <br><br><br>
+        </div>
+        <div class="col-sm-3">
+          <a href="{% url 'agri:dairy_farm' %}" class="button">{% trans 'Dairy farm' %}</a>
+          <br><br><br>
+        </div>
+        <div class="col-sm-3">
+          <a href="{% url 'agri:farm' %}" class="button">{% trans 'Farm Land' %}</a>
+          <br><br><br>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+<br><br><br>
+
+{% block photos %}{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-14 06:58+0000\n"
+"PO-Revision-Date: 2016-09-12 11:31+0000\n"
+"Last-Translator: b'  <alazar463@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.7.12\n"
+
+#: agri/models.py:31 agri/models.py:44
+msgid "name"
+msgstr "ስም"
+
+#: agri/models.py:32 agri/models.py:45
+msgid "email"
+msgstr "ኢሜል"
+
+#: agri/models.py:33 agri/models.py:46
+msgid "message"
+msgstr "መልክት"
+
+#: agri/templates/base.html:71 agri/templates/contents/home.html:6
+msgid "Home"
+msgstr "መግቢያ"
+
+#: agri/templates/base.html:72 agri/templates/contents/service.html:4
+msgid "Service"
+msgstr "አገልግሎት"
+
+#: agri/templates/base.html:74 agri/templates/contents/product.html:3
+#: agri/templates/contents/product_building.html:3
+#: agri/templates/contents/product_farm.html:3
+#: agri/templates/contents/product_poultry.html:3
+msgid "Products"
+msgstr "ምርቶች"
+
+#: agri/templates/base.html:76 agri/templates/base.html.py:88
+#: agri/templates/contents/description.html:49
+#: agri/templates/contents/product.html:52
+#: agri/templates/contents/product_building.html:49
+#: agri/templates/contents/product_farm.html:50
+#: agri/templates/contents/product_poultry.html:51
+msgid "All"
+msgstr "ሁሉም"
+
+#: agri/templates/base.html:77 agri/templates/contents/description.html:50
+#: agri/templates/contents/product.html:53
+#: agri/templates/contents/product.html:62
+#: agri/templates/contents/product_building.html:50
+#: agri/templates/contents/product_building.html:58
+#: agri/templates/contents/product_farm.html:51
+#: agri/templates/contents/product_poultry.html:52
+msgid "Building"
+msgstr "ህንፃ"
+
+#: agri/templates/base.html:78 agri/templates/base.html.py:91
+#: agri/templates/contents/dairy_farm_gallery.html:8
+#: agri/templates/contents/description.html:51
+#: agri/templates/contents/gallery.html:45
+#: agri/templates/contents/product.html:54
+#: agri/templates/contents/product.html:92
+#: agri/templates/contents/product_building.html:51
+#: agri/templates/contents/product_farm.html:52
+#: agri/templates/contents/product_farm.html:59
+#: agri/templates/contents/product_poultry.html:53
+#: agri/templates/gallery_base.html:38
+msgid "Dairy farm"
+msgstr "ከብት እርባታ"
+
+#: agri/templates/base.html:79 agri/templates/base.html.py:90
+#: agri/templates/contents/description.html:52
+#: agri/templates/contents/gallery.html:27
+#: agri/templates/contents/poultry_gallery.html:7
+#: agri/templates/contents/product.html:55
+#: agri/templates/contents/product.html:120
+#: agri/templates/contents/product_building.html:52
+#: agri/templates/contents/product_farm.html:53
+#: agri/templates/contents/product_poultry.html:54
+#: agri/templates/contents/product_poultry.html:60
+#: agri/templates/contents/service.html:22 agri/templates/gallery_base.html:34
+msgid "Poultry"
+msgstr " ዶሮ እርባታ"
+
+#: agri/templates/base.html:82 agri/templates/contents/news.html:4
+msgid "News"
+msgstr "ዜና"
+
+#: agri/templates/base.html:83 agri/templates/contents/about.html:3
+msgid "About-us"
+msgstr "ስለ እኛ"
+
+#: agri/templates/base.html:84 agri/templates/contents/contact.html:5
+msgid "Contact"
+msgstr "ማግኛ"
+
+#: agri/templates/base.html:86 agri/templates/contents/building_gallery.html:4
+#: agri/templates/contents/dairy_farm_gallery.html:5
+#: agri/templates/contents/farm_gallery.html:4
+#: agri/templates/contents/gallery.html:4
+#: agri/templates/contents/poultry_gallery.html:4
+msgid "Gallery"
+msgstr "ጋለሪ"
+
+#: agri/templates/base.html:89 agri/templates/contents/contact.html:69
+#: agri/templates/contents/home.html:139
+msgid "building"
+msgstr "ህንፃ"
+
+#: agri/templates/base.html:92 agri/templates/contents/farm_gallery.html:8
+#: agri/templates/contents/gallery.html:63
+msgid "Farm"
+msgstr "እርሻ"
+
+#: agri/templates/base.html:96
+msgid "Language"
+msgstr "ቋንቋ"
+
+#: agri/templates/base.html:128
+msgid "Come and let us grow together our nation!"
+msgstr "ይምጡና ሀገራችንን በጋራ እናሳድግ!!"
+
+#: agri/templates/base.html:135
+msgid "Find your place with us"
+msgstr "ይምጡና በጋራ እንስራ!!"
+
+#: agri/templates/base.html:142 agri/templates/base.html.py:154
+msgid "Grow your business here!!"
+msgstr "ይምጡና ሀገራችንን በጋራ እናሳድግ!!"
+
+#: agri/templates/base.html:148
+msgid ""
+"The sooner we talk, the sooner you’ll secure a prime location in a growing "
+"business location"
+msgstr "ይምጡና በጋራ እንስራ!!"
+
+#: agri/templates/base.html:187
+msgid "developed by"
+msgstr "የተሰራው በ"
+
+#: agri/templates/contents/building_gallery.html:7
+#: agri/templates/contents/gallery.html:7
+#: agri/templates/contents/service.html:34
+msgid "Commercial Building"
+msgstr "የንግድ ህንፃ"
+
+#: agri/templates/contents/contact.html:20
+msgid "General Manager of MALEMU Integrated Farm and Commercial businesses"
+msgstr "የ MALEMU Integrated Farm and Commercial businesses ዋና አስተዳዳሪ"
+
+#: agri/templates/contents/contact.html:21
+msgid "Name"
+msgstr "ስም"
+
+#: agri/templates/contents/contact.html:21
+msgid "Michael Alemu"
+msgstr "ሚካኤል አለሙ"
+
+#: agri/templates/contents/contact.html:29
+msgid "Or use Google map"
+msgstr "ወይም ጎግል ካርታን በመጠቀም"
+
+#: agri/templates/contents/contact.html:41
+#: agri/templates/contents/home.html:111
+msgid "Contact Us!"
+msgstr "ያግኙን!"
+
+#: agri/templates/contents/contact.html:68
+#: agri/templates/contents/home.html:138
+msgid "Arsi Asella, Ethiopia"
+msgstr ""
+
+#: agri/templates/contents/contact.html:69
+#: agri/templates/contents/home.html:139
+msgid "Kebele 10, inside Michael's"
+msgstr ""
+
+#: agri/templates/contents/description.html:27
+msgid "PRICE:"
+msgstr "ዋጋ"
+
+#: agri/templates/contents/description.html:27
+#: agri/templates/contents/home.html:52
+#: agri/templates/contents/product.html:77
+#: agri/templates/contents/product.html:107
+#: agri/templates/contents/product.html:135
+#: agri/templates/contents/product_building.html:73
+#: agri/templates/contents/product_farm.html:74
+#: agri/templates/contents/product_poultry.html:75
+msgid "birr"
+msgstr "ብር"
+
+#: agri/templates/contents/description.html:30
+msgid "Contact us:"
+msgstr ""
+
+#: agri/templates/contents/description.html:39
+msgid "or use google map"
+msgstr ""
+
+#: agri/templates/contents/description.html:47
+#: agri/templates/contents/product.html:50
+#: agri/templates/contents/product_building.html:47
+#: agri/templates/contents/product_farm.html:48
+#: agri/templates/contents/product_poultry.html:49
+msgid "Category"
+msgstr "ምድብ"
+
+#: agri/templates/contents/detail.html:25
+msgid "Recent stories"
+msgstr "የቅርብ ዜናዎች"
+
+#: agri/templates/contents/detail.html:50
+msgid "Comments"
+msgstr "አስተያየቶች"
+
+#: agri/templates/contents/detail.html:52
+#, fuzzy, python-format
+#| msgid "total number of comment"
+msgid "total number of comment%(total_comment|pluralize)s."
+msgstr "አጠቃላይ አስተያየቶች"
+
+#: agri/templates/contents/detail.html:62
+msgid "There are no comments. Be the first to comment"
+msgstr "ምንም አስተያየቶች የለም። አስተያየት በመስጠት የመጀመሪያ ይሁኑ"
+
+#: agri/templates/contents/detail.html:72
+msgid "Your comment has been added"
+msgstr "አስተያየቶ ተጨምሮዋል"
+
+#: agri/templates/contents/detail.html:75
+msgid "Add a new comment"
+msgstr "አዲስ አስተያየት ጨምር"
+
+#: agri/templates/contents/gallery.html:58
+#: agri/templates/contents/gallery.html:76
+msgid "See more"
+msgstr "ተጨማሪ ተመልከት"
+
+#: agri/templates/contents/home.html:37
+msgid "Our products"
+msgstr "ምርቶቻችን"
+
+#: agri/templates/contents/home.html:48
+#: agri/templates/contents/product.html:73
+#: agri/templates/contents/product.html:103
+#: agri/templates/contents/product.html:131
+#: agri/templates/contents/product_building.html:69
+#: agri/templates/contents/product_farm.html:70
+#: agri/templates/contents/product_poultry.html:71
+msgid "See description"
+msgstr "መግለጫውን ተመልከት"
+
+#: agri/templates/contents/home.html:52
+#: agri/templates/contents/product.html:77
+#: agri/templates/contents/product.html:107
+#: agri/templates/contents/product.html:135
+#: agri/templates/contents/product_building.html:73
+#: agri/templates/contents/product_farm.html:74
+#: agri/templates/contents/product_poultry.html:75
+msgid "Price:"
+msgstr "ዋጋ"
+
+#: agri/templates/contents/home.html:63
+msgid "Other products"
+msgstr "ሌላ ምርቶች"
+
+#: agri/templates/contents/home.html:74
+msgid "Latest news from our blog"
+msgstr "የቅርብ ዜናዎች ከ ብሎጋችን"
+
+#: agri/templates/contents/home.html:89
+#, python-format
+msgid "comment%(total_comment|pluralize)s"
+msgstr ""
+
+#: agri/templates/contents/home.html:91 agri/templates/contents/news.html:20
+msgid "Read more"
+msgstr "ተጨማሪ አንብብ"
+
+#: agri/templates/contents/service.html:18
+msgid "Our services"
+msgstr "አገልግሎቶቻችን"
+
+#: agri/templates/contents/service.html:26
+msgid "Dairy Farm"
+msgstr ""
+
+#: agri/templates/contents/service.html:30
+msgid "Our Farmers"
+msgstr "ግብርናችን"
+
+#: agri/templates/gallery_base.html:26
+msgid "Photo gallery categories"
+msgstr "የምስል ጋለሪ ምድቦች"
+
+#: agri/templates/gallery_base.html:30
+msgid "Our building"
+msgstr ""
+
+#: agri/templates/gallery_base.html:42
+msgid "Farm Land"
+msgstr "የአርሻ መሬት"
+
+#: agri/templates/pagination.html:7
+msgid "Previous"
+msgstr "ያለፈ"
+
+#: agri/templates/pagination.html:13
+msgid "Next"
+msgstr "ቀጣይ"
+
+#: michael/settings.py:98
+msgid "English"
+msgstr "ኢንግሊዘኛ"
+
+#: michael/settings.py:99
+msgid "Amharic"
+msgstr "አማርኛ"
+
+#~ msgid "comment"
+#~ msgstr "አስተያየቶች"
